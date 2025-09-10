@@ -1,0 +1,7 @@
+{
+    "defaultSensitivity": 0.5,
+    "defaultAnalysisType": "ai_detection",
+    "defaultExportFormat": "pdf",
+    "defaultVisualizationType": "features",
+    "theme": "light"
+}

@@ -1,6 +1,10 @@
 import { useState, useRef } from "react";
 
-export default function FileUpload({ onUpload, multiple = false }) {
+export default function FileUpload({ 
+  onUpload, 
+  multiple = false, 
+  acceptedFileTypes = ""
+}) {
   const [files, setFiles] = useState([]);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef(null);
@@ -71,7 +75,7 @@ export default function FileUpload({ onUpload, multiple = false }) {
           type="file"
           className="hidden"
           onChange={handleFileChange}
-          accept=".pdf,.doc,.docx,.txt,.py,.java,.js,.jsx,.ts,.tsx,.c,.cpp,.cs,.html,.css"
+          accept={acceptedFileTypes || ".pdf,.doc,.docx,.txt,.py,.java,.js,.jsx,.ts,.tsx,.c,.cpp,.cs,.html,.css"}
           multiple={multiple}
         />
         
@@ -103,6 +107,11 @@ export default function FileUpload({ onUpload, multiple = false }) {
                   ? "Upload multiple files - code, documents, and text files (MAX. 10MB each)" 
                   : "PDF, DOC, DOCX or TXT (MAX. 10MB)"}
               </p>
+              {acceptedFileTypes && (
+                <p className="text-xs text-gray-400 mt-1">
+                  Accepted formats: {acceptedFileTypes.split(',').map(ext => ext.replace('.', '')).join(', ')}
+                </p>
+              )}
             </>
           ) : (
             <>

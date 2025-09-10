@@ -51,7 +51,7 @@ def extract_basic_features(text):
     try:
         stop_words = set(stopwords.words('english'))
     except:
-        stop_words = set()  # Fallback if stopwords not available
+        stop_words = set()  # Fallback if stopwords nobt available
     
     # Calculate features
     features = {
@@ -95,6 +95,19 @@ def extract_advanced_features(text):
     word_count = len(words)
     sentence_count = len(sentences)
     
+    # Set of stopwords
+    try:
+        stop_words = set(stopwords.words('english'))
+    except:
+        stop_words = set()  # Fallback if stopwords not available
+    
+    # Type-Token Ratio (measure of lexical diversity)
+    type_token_ratio = len(set(words)) / max(word_count, 1)
+    
+    # Content words analysis (non-stop words)
+    content_words = [w for w in words if w not in stop_words]
+    stop_words_ratio = (word_count - len(content_words)) / max(word_count, 1)
+    
     # POS tagging
     try:
         pos_tags = nltk.pos_tag(words)
@@ -111,65 +124,131 @@ def extract_advanced_features(text):
                      pos_counts.get('JJS', 0)) / max(total_tags, 1)
         adv_ratio = (pos_counts.get('RB', 0) + pos_counts.get('RBR', 0) + 
                      pos_counts.get('RBS', 0)) / max(total_tags, 1)
-    except:
+        
+        # Conjunction and determiner ratios (often different in AI text)
+        conj_ratio = (pos_counts.get('CC', 0) + pos_counts.get('IN', 0)) / max(total_tags, 1)
+        det_ratio = pos_counts.get('DT', 0) / max(total_tags, 1)
+        
+        # Syntactic complexity: measure of subordination
+        subordinating_conj = ['although', 'because', 'since', 'unless', 'whereas', 'while']
+        subord_ratio = len([w for w in words if w.lower() in subordinating_conj]) / max(word_count, 1)
+        
+    except Exception as e:
         # Fallback if POS tagging fails
-        noun_ratio = verb_ratio = adj_ratio = adv_ratio = 0
+        noun_ratio = verb_ratio = adj_ratio = adv_ratio = conj_ratio = det_ratio = subord_ratio = 0
     
     # Sentence structure analysis
     sentence_lengths = [len(word_tokenize(s)) for s in sentences]
     sentence_length_variance = np.var(sentence_lengths) if len(sentence_lengths) > 1 else 0
+    
+    # Sentence complexity analysis
+    complex_sentence_markers = [',', ';', 'which', 'that', 'who', 'whom', 'whose']
+    complex_sentence_count = sum(1 for s in sentences if any(marker in s.lower() for marker in complex_sentence_markers))
+    complex_sentence_ratio = complex_sentence_count / max(sentence_count, 1)
     
     # Word frequency distribution
     word_freqs = Counter(words)
     freq_words = [word for word, count in word_freqs.most_common(int(word_count * 0.1))]
     freq_words_ratio = sum(word_freqs[w] for w in freq_words) / max(word_count, 1) if freq_words else 0
     
-    # Perplexity estimation (simplified)
+    # Perplexity estimation (sophisticated version)
     # A measure of how predictable the text is
-    if word_count > 10:
+    if word_count > 15:
+        # Use both unigrams, bigrams and trigrams for better perplexity estimation
         bigrams = list(zip(words[:-1], words[1:]))
+        trigrams = list(zip(words[:-2], words[1:-1], words[2:])) if len(words) > 2 else []
+        
         bigram_counts = Counter(bigrams)
+        trigram_counts = Counter(trigrams)
         unigram_counts = Counter(words)
         
+        # Interpolated language model (combine unigram, bigram, trigram probabilities)
         log_probs = []
-        for w1, w2 in bigrams:
-            # Simple bigram probability
-            prob = bigram_counts[(w1, w2)] / max(unigram_counts[w1], 1)
-            log_probs.append(math.log(prob) if prob > 0 else -10)  # -10 as default for unseen
+        lambda1, lambda2, lambda3 = 0.1, 0.4, 0.5  # Weights for interpolation
+        
+        for i in range(2, len(words)):
+            w1, w2, w3 = words[i-2], words[i-1], words[i]
+            
+            # Unigram probability
+            p_uni = unigram_counts[w3] / max(word_count, 1)
+            
+            # Bigram probability
+            p_bi = bigram_counts[(w2, w3)] / max(unigram_counts[w2], 1)
+            
+            # Trigram probability
+            p_tri = trigram_counts[(w1, w2, w3)] / max(bigram_counts[(w1, w2)], 1)
+            
+            # Interpolated probability
+            p_interp = lambda1 * p_uni + lambda2 * p_bi + lambda3 * p_tri
+            log_probs.append(math.log(p_interp) if p_interp > 0 else -10)
         
         perplexity = math.exp(-sum(log_probs) / max(len(log_probs), 1)) if log_probs else 100
     else:
-        perplexity = 100  # Default for short texts
+        # Simplified perplexity for short texts
+        perplexity = 100
     
     # Burstiness - measure of word usage patterns
     # AI text often has more even word distributions than human text
     if word_count > 10:
-        word_freqs = np.array(list(word_freqs.values()))
-        burstiness = np.std(word_freqs) / max(np.mean(word_freqs), 1)
+        word_freqs_values = np.array(list(word_freqs.values()))
+        burstiness = np.std(word_freqs_values) / max(np.mean(word_freqs_values), 1)
+        
+        # Zipf's law compliance (how well the word distribution follows Zipf's law)
+        # Human text often follows Zipf's law more closely
+        ranks = np.arange(1, len(word_freqs_values) + 1)
+        sorted_freqs = np.sort(word_freqs_values)[::-1]  # Sort in descending order
+        
+        # Calculate expected frequencies according to Zipf's law
+        total_freq = np.sum(sorted_freqs)
+        harmonic_sum = np.sum(1 / ranks)
+        expected_freqs = total_freq * (1 / ranks) / harmonic_sum
+        
+        # Measure deviation from Zipf's law (lower is more human-like)
+        zipf_deviation = np.mean(np.abs(sorted_freqs - expected_freqs) / expected_freqs)
     else:
         burstiness = 0
+        zipf_deviation = 0
+        
+    # Transition words analysis (expanded list)
+    transition_words = [
+        'however', 'therefore', 'thus', 'hence', 'consequently', 'moreover', 
+        'furthermore', 'nevertheless', 'conversely', 'similarly', 'likewise',
+        'in addition', 'in contrast', 'on the other hand', 'specifically',
+        'for example', 'in particular', 'indeed', 'in fact', 'in conclusion'
+    ]
+    
+    transition_patterns = [r'\b' + re.escape(w) + r'\b' for w in transition_words]
+    transition_count = sum(len(re.findall(pattern, text.lower())) for pattern in transition_patterns)
+    transition_ratio = transition_count / max(sentence_count, 1)
         
     # Add advanced features to basic ones
     advanced_features = {
+        # Lexical diversity
+        'type_token_ratio': type_token_ratio,
+        'stop_words_ratio': stop_words_ratio,
+        
         # POS tag distributions
         'noun_ratio': noun_ratio,
         'verb_ratio': verb_ratio,
         'adjective_ratio': adj_ratio,
         'adverb_ratio': adv_ratio,
+        'conjunction_ratio': conj_ratio,
+        'determiner_ratio': det_ratio,
+        'subordination_ratio': subord_ratio,
         
         # Sentence structure
         'sentence_length_variance': sentence_length_variance,
         'sentence_length_max': max(sentence_lengths) if sentence_lengths else 0,
+        'complex_sentence_ratio': complex_sentence_ratio,
         
         # Predictability and distribution
         'frequent_words_ratio': freq_words_ratio,
         'perplexity': perplexity,
         'burstiness': burstiness,
+        'zipf_deviation': zipf_deviation,
         
-        # Transition features - how smoothly text flows
-        'transition_words_ratio': len([w for w in words if w.lower() in 
-                                      ['however', 'therefore', 'thus', 'hence', 
-                                       'consequently', 'moreover', 'furthermore']]) / max(word_count, 1)
+        # Transition features
+        'transition_ratio': transition_ratio,
     }
     
     # Combine basic and advanced features

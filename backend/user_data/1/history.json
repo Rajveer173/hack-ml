@@ -1,0 +1,370 @@
+[
+    {
+        "id": "69871a79-4d75-4528-9300-274853d69b75",
+        "timestamp": "2025-09-08 15:41:24",
+        "analysis_type": "plagiarism",
+        "filename": "text_input.txt",
+        "probability": 0,
+        "result": {
+            "message": "Analysis complete",
+            "comparisons": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 90.0,
+                    "similarity_level": "High",
+                    "flag": "red",
+                    "ml_confidence_score": 75,
+                    "matching_sections": []
+                }
+            ],
+            "heatmap_data": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 100.0
+                }
+            ],
+            "sensitivity_used": 0.5,
+            "thresholds": {
+                "high_similarity": 70,
+                "moderate_similarity": 40
+            },
+            "model_version": 1.0
+        }
+    },
+    {
+        "id": "fc91bfc6-3d2d-496b-9007-ec6baa64c898",
+        "timestamp": "2025-09-08 15:41:25",
+        "analysis_type": "plagiarism",
+        "filename": "text_input.txt",
+        "probability": 0,
+        "result": {
+            "message": "Analysis complete",
+            "comparisons": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 90.0,
+                    "similarity_level": "High",
+                    "flag": "red",
+                    "ml_confidence_score": 75,
+                    "matching_sections": []
+                }
+            ],
+            "heatmap_data": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 100.0
+                }
+            ],
+            "sensitivity_used": 0.5,
+            "thresholds": {
+                "high_similarity": 70,
+                "moderate_similarity": 40
+            },
+            "model_version": 1.0
+        }
+    },
+    {
+        "id": "69fa1c81-e80d-466b-9d32-a60ca96c9acb",
+        "timestamp": "2025-09-08 15:41:26",
+        "analysis_type": "plagiarism",
+        "filename": "text_input.txt",
+        "probability": 0,
+        "result": {
+            "message": "Analysis complete",
+            "comparisons": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 90.0,
+                    "similarity_level": "High",
+                    "flag": "red",
+                    "ml_confidence_score": 75,
+                    "matching_sections": []
+                }
+            ],
+            "heatmap_data": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 100.0
+                }
+            ],
+            "sensitivity_used": 0.5,
+            "thresholds": {
+                "high_similarity": 70,
+                "moderate_similarity": 40
+            },
+            "model_version": 1.0
+        }
+    },
+    {
+        "id": "6c9d2aa4-248c-43a1-9580-9b5a4729ae59",
+        "timestamp": "2025-09-08 15:41:27",
+        "analysis_type": "plagiarism",
+        "filename": "text_input.txt",
+        "probability": 0,
+        "result": {
+            "message": "Analysis complete",
+            "comparisons": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 0.0,
+                    "similarity_level": "Low",
+                    "flag": "green",
+                    "ml_confidence_score": 70,
+                    "matching_sections": []
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity_score": 90.0,
+                    "similarity_level": "High",
+                    "flag": "red",
+                    "ml_confidence_score": 75,
+                    "matching_sections": []
+                }
+            ],
+            "heatmap_data": [
+                {
+                    "file1": "user_input.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "user_input.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 100.0
+                },
+                {
+                    "file1": "common_source_1.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "user_input.txt",
+                    "similarity": 0.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_1.txt",
+                    "similarity": 90.0
+                },
+                {
+                    "file1": "common_source_2.txt",
+                    "file2": "common_source_2.txt",
+                    "similarity": 100.0
+                }
+            ],
+            "sensitivity_used": 0.5,
+            "thresholds": {
+                "high_similarity": 70,
+                "moderate_similarity": 40
+            },
+            "model_version": 1.0
+        }
+    }
+]

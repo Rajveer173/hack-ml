@@ -2,6 +2,10 @@
 API endpoints for enhanced ML features and user controls.
 """
 
+# Configure matplotlib to use 'Agg' backend (no GUI required)
+import matplotlib
+matplotlib.use('Agg')
+
 from flask import Blueprint, jsonify, request, current_app
 import os
 import json
@@ -26,9 +30,36 @@ ALLOWED_EXTENSIONS = {
     'ts', 'tsx', 'c', 'cpp', 'cs', 'html', 'css'
 }
 
-# History storage
+# History storage for non-authenticated users
 HISTORY_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'history')
 os.makedirs(HISTORY_DIR, exist_ok=True)
+
+# User data directory for authenticated users
+USER_DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'user_data')
+os.makedirs(USER_DATA_DIR, exist_ok=True)
+
+def get_user_id_from_session():
+    """Get user ID from session if available"""
+    from flask import session
+    return session.get('user_id')
+
+def get_user_history_file(user_id=None):
+    """Get the history file path for a specific user or for anonymous"""
+    if user_id:
+        user_dir = os.path.join(USER_DATA_DIR, str(user_id))
+        os.makedirs(user_dir, exist_ok=True)
+        return os.path.join(user_dir, 'history.json')
+    else:
+        return os.path.join(HISTORY_DIR, 'analysis_history.json')
+
+def get_user_settings_file(user_id=None):
+    """Get the settings file path for a specific user or for anonymous"""
+    if user_id:
+        user_dir = os.path.join(USER_DATA_DIR, str(user_id))
+        os.makedirs(user_dir, exist_ok=True)
+        return os.path.join(user_dir, 'settings.json')
+    else:
+        return os.path.join(HISTORY_DIR, 'default_settings.json')
 
 def allowed_file(filename):
     """Check if the file extension is allowed"""
@@ -61,6 +92,7 @@ def save_to_history(analysis_type, filename, content, result):
     """Save analysis result to history"""
     import datetime
     import uuid
+    from database import get_db_connection
     
     # Generate unique ID
     analysis_id = str(uuid.uuid4())
@@ -68,17 +100,40 @@ def save_to_history(analysis_type, filename, content, result):
     # Create timestamp
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
+    # Get user ID from session if available
+    user_id = get_user_id_from_session()
+    
     # Prepare history entry
     history_entry = {
         'id': analysis_id,
         'timestamp': timestamp,
-        'type': analysis_type,
+        'analysis_type': analysis_type,
         'filename': filename,
+        'probability': result.get('probability', 0),
         'result': result
     }
     
-    # Save to history file
-    history_file = os.path.join(HISTORY_DIR, 'analysis_history.json')
+    # If user is authenticated, store in database
+    if user_id:
+        # Save to SQLite for metadata
+        try:
+            conn = get_db_connection()
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                INSERT INTO analysis_history 
+                (id, user_id, analysis_type, timestamp, file_name, probability)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (analysis_id, user_id, analysis_type, timestamp, filename, result.get('probability', 0))
+            )
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            current_app.logger.error(f"Error saving to database: {str(e)}")
+    
+    # Save to user-specific or general history file
+    history_file = get_user_history_file(user_id)
     
     try:
         # Load existing history
@@ -91,13 +146,14 @@ def save_to_history(analysis_type, filename, content, result):
         # Add new entry
         history.append(history_entry)
         
-        # Save updated history
+        # Save updated history (keep only the 50 most recent entries)
         with open(history_file, 'w') as f:
-            json.dump(history, f, indent=4)
+            json.dump(history[-50:], f, indent=4)
             
         return analysis_id
     except Exception as e:
-        current_app.logger.error(f"Error saving to history: {str(e)}")
+        current_app.logger.error(f"Error saving to history file: {str(e)}")
+        return analysis_id
         return None
 
 def create_visualization(data, viz_type):
@@ -192,6 +248,62 @@ def enhanced_ai_detection():
         return jsonify(result)
     
     return jsonify({"error": "File type not allowed"}), 400
+
+@enhanced_api.route("/ai-detection/text", methods=["POST"])
+def enhanced_ai_detection_text():
+    """Enhanced AI detection for text input"""
+    current_app.logger.info("Received text-based AI detection request")
+    
+    data = request.get_json()
+    if not data:
+        current_app.logger.warning("No JSON data provided in request")
+        return jsonify({"error": "No data provided", "details": "Request must include JSON payload"}), 400
+        
+    text = data.get('text')
+    sensitivity = data.get('sensitivity')
+    
+    if not text:
+        current_app.logger.warning("Empty text field in AI detection request")
+        return jsonify({"error": "No text provided", "details": "The 'text' field is required"}), 400
+    
+    current_app.logger.info(f"Processing AI detection for text of length {len(text)} chars with sensitivity {sensitivity}")
+    
+    # Get AI detection results using the enhanced model
+    try:
+        ai_detection = ai_detector.predict(text, sensitivity=sensitivity)
+        
+        # Create feature importance visualization
+        if 'feature_importance' in ai_detection:
+            current_app.logger.info("Generating feature importance visualization")
+            ai_detection['feature_importance_viz'] = create_visualization(
+                ai_detection['feature_importance'], 'feature_importance')
+        
+        # Save to history
+        current_app.logger.info("Saving analysis to history")
+        analysis_id = save_to_history('ai_detection', 'text_input.txt', text, ai_detection)
+        
+        # Calculate probability from AI score
+        probability = ai_detection["ai_score"] / 100
+        
+        # Format response
+        result = {
+            "id": analysis_id,
+            "probability": probability,
+            "analysis_type": "ai-detection",
+            "filename": "text_input.txt",
+            "content": text[:1000] + ("..." if len(text) > 1000 else ""),
+            "timestamp": ai_detection.get("timestamp", None),
+            "model_version": ai_detection.get("model_version", "1.0"),
+            "classification": ai_detection.get("classification", "Unknown"),
+            "detailed_results": ai_detection.get("feature_analysis", {}),
+            "feature_importance": ai_detection.get("feature_importance", {}),
+            "visualization": ai_detection.get("feature_importance_viz", "")
+        }
+        
+        return jsonify(result)
+    except Exception as e:
+        current_app.logger.error(f"Error in text AI detection: {str(e)}")
+        return jsonify({"error": f"AI detection failed: {str(e)}"}), 500
 
 @enhanced_api.route("/plagiarism", methods=["POST"])
 def enhanced_plagiarism_check():
@@ -312,8 +424,12 @@ def update_thresholds():
 
 @enhanced_api.route("/history", methods=["GET"])
 def get_analysis_history():
-    """Get analysis history"""
-    history_file = os.path.join(HISTORY_DIR, 'analysis_history.json')
+    """Get analysis history for the current user"""
+    # Get user ID from session if available
+    user_id = get_user_id_from_session()
+    
+    # Get appropriate history file
+    history_file = get_user_history_file(user_id)
     
     if not os.path.exists(history_file):
         return jsonify({"history": []})
@@ -356,6 +472,70 @@ def get_analysis_details(analysis_id):
     except Exception as e:
         current_app.logger.error(f"Error reading analysis details: {str(e)}")
         return jsonify({"error": "Could not read analysis details"}), 500
+
+@enhanced_api.route("/plagiarism/text", methods=["POST"])
+def enhanced_plagiarism_check_text():
+    """Enhanced plagiarism detection for text input"""
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+        
+    text = data.get('text')
+    sensitivity = data.get('sensitivity')
+    
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
+        
+    # Create fake document dictionary for single text plagiarism check
+    # We compare the text against online content and common sources
+    documents = {
+        "user_input.txt": text,
+        "common_source_1.txt": "This is a placeholder for checking against common sources.",
+        "common_source_2.txt": "Another placeholder for checking against common sources."
+    }
+    
+    # Use the plagiarism detector to compare the text against common sources
+    try:
+        results = plagiarism_detector.compare_documents(
+            documents,
+            sensitivity=sensitivity
+        )
+        
+        # Save to history
+        analysis_id = save_to_history('plagiarism', 'text_input.txt', text, results)
+        results['analysis_id'] = analysis_id
+        
+        return jsonify(results)
+    except Exception as e:
+        current_app.logger.error(f"Error in text plagiarism check: {str(e)}")
+        return jsonify({"error": f"Plagiarism check failed: {str(e)}"}), 500
+
+@enhanced_api.route("/visualize/<analysis_id>", methods=["GET"])
+def visualize_analysis(analysis_id):
+    """Generate visualization for analysis results"""
+    from visualization import generate_feature_visualization, get_analysis_by_id
+    
+    visualization_type = request.args.get('type', default='features')
+    
+    # Get analysis data
+    analysis_data = get_analysis_by_id(analysis_id)
+    
+    if not analysis_data:
+        return jsonify({"error": "Analysis not found"}), 404
+    
+    try:
+        # Generate visualization
+        image_base64 = generate_feature_visualization(analysis_data, visualization_type)
+        
+        # Return visualization data
+        return jsonify({
+            "image": image_base64,
+            "type": visualization_type,
+            "analysis_id": analysis_id
+        })
+    except Exception as e:
+        current_app.logger.error(f"Error generating visualization: {str(e)}")
+        return jsonify({"error": f"Visualization generation failed: {str(e)}"}), 500
 
 @enhanced_api.route("/export/<analysis_id>", methods=["GET"])
 def export_analysis(analysis_id):
@@ -505,3 +685,80 @@ def update_model():
     except Exception as e:
         current_app.logger.error(f"Error updating model: {str(e)}")
         return jsonify({"error": "Could not update model"}), 500
+
+@enhanced_api.route("/settings", methods=["GET"])
+def get_user_settings():
+    """Get user settings"""
+    # Get user ID from session if available
+    user_id = get_user_id_from_session()
+    
+    # Get appropriate settings file
+    settings_file = get_user_settings_file(user_id)
+    
+    # Default settings
+    default_settings = {
+        "defaultSensitivity": 0.5,
+        "defaultAnalysisType": "ai_detection",
+        "defaultExportFormat": "pdf",
+        "defaultVisualizationType": "features",
+        "theme": "light"
+    }
+    
+    if os.path.exists(settings_file):
+        try:
+            with open(settings_file, 'r') as f:
+                settings = json.load(f)
+                # Merge with defaults for any missing settings
+                for key, value in default_settings.items():
+                    if key not in settings:
+                        settings[key] = value
+        except Exception as e:
+            current_app.logger.error(f"Error reading settings file: {str(e)}")
+            settings = default_settings
+    else:
+        # Create default settings file
+        settings = default_settings
+        try:
+            with open(settings_file, 'w') as f:
+                json.dump(settings, f, indent=4)
+        except Exception as e:
+            current_app.logger.error(f"Error creating settings file: {str(e)}")
+    
+    return jsonify(settings)
+
+@enhanced_api.route("/settings", methods=["POST"])
+def update_user_settings():
+    """Update user settings"""
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "No settings provided"}), 400
+    
+    # Get user ID from session if available
+    user_id = get_user_id_from_session()
+    
+    # Get appropriate settings file
+    settings_file = get_user_settings_file(user_id)
+    
+    # Load existing settings or create default
+    if os.path.exists(settings_file):
+        try:
+            with open(settings_file, 'r') as f:
+                settings = json.load(f)
+        except Exception as e:
+            current_app.logger.error(f"Error reading settings file: {str(e)}")
+            settings = {}
+    else:
+        settings = {}
+    
+    # Update settings with new values
+    for key, value in data.items():
+        settings[key] = value
+    
+    # Save updated settings
+    try:
+        with open(settings_file, 'w') as f:
+            json.dump(settings, f, indent=4)
+        return jsonify({"message": "Settings updated successfully", "settings": settings})
+    except Exception as e:
+        current_app.logger.error(f"Error saving settings: {str(e)}")
+        return jsonify({"error": "Could not save settings"}), 500

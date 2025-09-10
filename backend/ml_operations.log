@@ -1,0 +1,505 @@
+2025-09-09 19:34:05,278 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 19:34:05,289 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-09 19:34:31,487 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_model.py', reloading
+2025-09-09 19:44:24,288 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 19:44:25,242 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.211.57.58:5000
+2025-09-09 19:44:25,248 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-09 19:44:25,252 - werkzeug - INFO -  * Restarting with stat
+2025-09-09 19:44:27,678 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 19:44:28,478 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 19:44:28,486 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-09 19:44:33,126 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:44:33] "POST /enhanced/plagiarism HTTP/1.1" 200 -
+2025-09-09 19:46:36,355 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:46:36] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 19:46:36,608 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:46:36] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 19:46:46,997 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:46:46] "POST /enhanced/plagiarism HTTP/1.1" 200 -
+2025-09-09 19:47:06,468 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:06] "OPTIONS /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:47:06,794 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:06] "[31m[1mPOST /enhanced/plagiarism/text HTTP/1.1[0m" 400 -
+2025-09-09 19:47:09,038 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:09] "[31m[1mPOST /enhanced/plagiarism/text HTTP/1.1[0m" 400 -
+2025-09-09 19:47:15,285 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:15] "OPTIONS /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:47:15,607 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:15] "[31m[1mPOST /enhanced/plagiarism/text HTTP/1.1[0m" 400 -
+2025-09-09 19:47:35,180 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-09 19:47:35,512 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-09 19:47:35,521 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-09 19:47:35,521 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-09 19:47:35,855 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-09 19:47:35,860 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:35] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-09 19:47:40,647 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:40] "OPTIONS /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:47:41,017 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:41] "POST /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:47:41,241 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:47:41] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-09 19:48:01,138 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:48:01] "GET /enhanced/visualize/d3e5eac8-f22f-4ce0-b9bf-8a1e9a5426e8?type=features HTTP/1.1" 200 -
+2025-09-09 19:48:16,367 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:48:16] "OPTIONS /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:48:16,693 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:48:16] "[31m[1mPOST /enhanced/plagiarism/text HTTP/1.1[0m" 400 -
+2025-09-09 19:50:40,416 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:50:40] "OPTIONS /enhanced/plagiarism/text HTTP/1.1" 200 -
+2025-09-09 19:50:40,752 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:50:40] "[31m[1mPOST /enhanced/plagiarism/text HTTP/1.1[0m" 400 -
+2025-09-09 19:51:16,134 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:51:16] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 19:52:33,519 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:52:33] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 19:54:50,070 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-09 19:54:50,736 - werkzeug - INFO -  * Restarting with stat
+2025-09-09 19:54:53,939 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 19:54:55,013 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 19:54:55,030 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-09 19:55:23,435 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:55:23] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 19:59:07,018 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-09 19:59:07,867 - werkzeug - INFO -  * Restarting with stat
+2025-09-09 19:59:11,256 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 19:59:12,598 - werkzeug - WARNING -  * Debugger is active!
+2025-09-09 19:59:12,612 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-09 19:59:14,934 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 19:59:14] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 20:00:32,209 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:00:32] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 20:00:32,459 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:00:32] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-09 20:01:27,758 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 20:01:27,774 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-09 20:01:27,774 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:01:27,774 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-09 20:01:27,785 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:01:27,791 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:01:27] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-09 20:03:32,259 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 20:03:32,271 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-09 20:03:32,284 - app - ERROR - Error in AI detection: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:32,288 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:03:32] "[35m[1mPOST /plagiarism/check HTTP/1.1[0m" 500 -
+2025-09-09 20:03:55,372 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-09 20:03:55,500 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-09 20:03:55,504 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,506 - ml_models - INFO - Starting AI content analysis of 81 characters
+2025-09-09 20:03:55,509 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2) - Copy.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,509 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-09 20:03:55,509 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,517 - ml_models - INFO - Starting AI content analysis of 72 characters
+2025-09-09 20:03:55,520 - app - ERROR - Error detecting AI in DEPARTMENT OF JUSTICE MANNUALS-3.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,520 - ml_models - INFO - Starting AI content analysis of 116 characters
+2025-09-09 20:03:55,525 - app - ERROR - Error detecting AI in Department of Education – Legal Compliance, Training, and Operational Guidelines.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,525 - ml_models - INFO - Starting AI content analysis of 56 characters
+2025-09-09 20:03:55,533 - app - ERROR - Error detecting AI in S2DS23F3000717 (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,533 - ml_models - INFO - Starting AI content analysis of 91 characters
+2025-09-09 20:03:55,537 - app - ERROR - Error detecting AI in Department of the Treasury Manual Tom Clinton's Term.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,541 - ml_models - INFO - Starting AI content analysis of 59 characters
+2025-09-09 20:03:55,545 - app - ERROR - Error detecting AI in Tejas Kole - Resume.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-09 20:03:55,549 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:03:55] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-09 20:04:58,425 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:04:58] "POST /document/verify HTTP/1.1" 200 -
+2025-09-09 20:05:03,518 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:03] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-09 20:05:03,824 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:03] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-09 20:05:03,828 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:03] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-09 20:05:03,849 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:03] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-09 20:05:04,140 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:04] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-09 20:05:04,164 - werkzeug - INFO - 127.0.0.1 - - [09/Sep/2025 20:05:04] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-10 17:35:51,786 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:35:52,975 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.226.219.58:5000
+2025-09-10 17:35:52,975 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-10 17:35:52,984 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:35:55,743 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:35:56,449 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:35:56,449 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:36:04,244 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:36:04] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:36:04,324 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:36:04] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:36:56,024 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:36:56,075 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:36:56,097 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:36:56,098 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:36:56,121 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:36:56,125 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:36:56] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 17:37:11,246 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:11] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:11,560 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:11] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:12,823 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:12] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:13,159 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:13] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:13,636 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:13] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:13,956 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:13] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:37:14,109 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:37:14] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:38:20,084 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:38:20,102 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:38:20,121 - app - ERROR - Error in AI detection: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:38:20,123 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:38:20] "[35m[1mPOST /plagiarism/check HTTP/1.1[0m" 500 -
+2025-09-10 17:40:21,451 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:40:21,986 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:40:24,444 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:41:00,110 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:43:18,546 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:45:20,561 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:45:39,820 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:48:46,176 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:48:46,951 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.226.219.58:5000
+2025-09-10 17:48:46,951 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-10 17:48:46,951 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:48:49,460 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:48:50,369 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:48:50,373 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:48:53,827 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:48:53] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:48:53,843 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:48:53] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:49:04,690 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:49:04,701 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:49:04,707 - app - ERROR - Error in AI detection: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:49:04,707 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:49:04] "[35m[1mPOST /plagiarism/check HTTP/1.1[0m" 500 -
+2025-09-10 17:49:43,008 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:49:43,473 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:49:46,090 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:49:46,938 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:49:46,952 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:50:50,869 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 17:50:51,462 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:50:54,500 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:50:55,406 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:50:55,415 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:51:34,098 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:51:34,586 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:51:37,509 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:51:38,211 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:51:38,211 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:51:46,660 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:51:47,128 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:51:49,677 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:51:50,661 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:51:50,668 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:51:57,945 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:51:57] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:51:58,197 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:51:58] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:52:02,196 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:52:02,221 - ml_models - INFO - Starting AI content analysis of 72 characters
+2025-09-10 17:52:02,240 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:52:02,253 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:52:02] "POST /plagiarism/check HTTP/1.1" 200 -
+2025-09-10 17:52:44,377 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:52:44] "OPTIONS /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:52:44,696 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:52:44,699 - ml_models - INFO - Starting AI content analysis of 1593 characters
+2025-09-10 17:52:44,756 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:52:44,756 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:52:44] "POST /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:55:57,159 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:55:57,666 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:56:00,426 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:01,692 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:56:01,702 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:56:12,427 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 17:56:12,968 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:56:15,566 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:16,575 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:56:16,584 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:56:28,811 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:28] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:56:29,080 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:29] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:56:30,126 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:56:31,143 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:56:33,865 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:34,515 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:56:34,521 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:56:37,759 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:37] "OPTIONS /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:56:38,090 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:38,110 - ml_models - INFO - Starting AI content analysis of 39 characters
+2025-09-10 17:56:38,131 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:56:38,135 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:38] "POST /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:56:43,826 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:43] "OPTIONS /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:56:43,840 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:43,860 - ml_models - INFO - Starting AI content analysis of 39 characters
+2025-09-10 17:56:43,881 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:56:43,892 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:43] "POST /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:56:47,190 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 17:56:48,365 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:56:51,349 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:52,317 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:56:52,334 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:56:58,171 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:56:58,198 - ml_models - INFO - Starting AI content analysis of 49 characters
+2025-09-10 17:56:58,239 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:56:58,248 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:56:58] "POST /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:57:07,965 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:57:07] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:57:08,279 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:57:08] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:57:23,416 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:57:23,431 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:57:23,434 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:57:23,434 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 17:57:23,451 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:57:23,461 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:57:23] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 17:58:25,051 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 17:58:25,574 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 17:58:28,340 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:58:29,021 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 17:58:29,029 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 17:58:31,883 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:58:31] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 17:58:41,082 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:58:41] "OPTIONS /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 17:58:41,089 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 17:58:41,090 - ml_models - INFO - Starting AI content analysis of 1593 characters
+2025-09-10 17:58:41,119 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 17:58:41,124 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 17:58:41] "POST /plagiarism/check/text/enhanced HTTP/1.1" 200 -
+2025-09-10 18:00:28,652 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 18:00:29,270 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:00:32,265 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:00:33,144 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:00:33,152 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:01:21,136 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:01:21,541 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:01:24,213 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:01:25,193 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:01:25,204 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:15:08,860 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:08] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:15:09,113 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:09] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:15:13,212 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-10 18:15:13,547 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-10 18:15:13,553 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "[31m[1mGET /user/settings HTTP/1.1[0m" 401 -
+2025-09-10 18:15:13,564 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-10 18:15:13,891 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "GET /enhanced/history HTTP/1.1" 200 -
+2025-09-10 18:15:13,909 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:13] "GET /enhanced/settings HTTP/1.1" 200 -
+2025-09-10 18:15:19,206 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:15:19] "GET /enhanced/visualize/d3e5eac8-f22f-4ce0-b9bf-8a1e9a5426e8?type=features HTTP/1.1" 200 -
+2025-09-10 18:16:11,245 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 18:16:11,748 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:16:14,526 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:16:15,394 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:16:15,406 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:16:30,344 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 18:16:30,795 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:16:33,602 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:16:34,208 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:16:34,217 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:16:45,048 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:16:45,071 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:16:45,100 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:16:45,100 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:16:45] "POST /plagiarism/check HTTP/1.1" 200 -
+2025-09-10 18:17:04,215 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:17:04] "POST /document/verify HTTP/1.1" 200 -
+2025-09-10 18:18:15,207 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:18:15,230 - ml_models - INFO - Starting AI content analysis of 72 characters
+2025-09-10 18:18:15,252 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:18:15,264 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:18:15] "POST /plagiarism/check HTTP/1.1" 200 -
+2025-09-10 18:18:29,552 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:18:29,639 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:18:29,665 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:18:29,665 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:18:29,696 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:18:29,705 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:18:29] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:20:43,335 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:20:43,823 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:20:48,049 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:20:48,961 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:20:48,974 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:20:56,144 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 18:20:56,655 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:20:59,207 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:21:00,015 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:21:00,038 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:21:08,122 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\ml_integration.py', reloading
+2025-09-10 18:21:08,505 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:21:11,366 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:21:12,281 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:21:12,302 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:21:51,205 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:21:51] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:22:03,420 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:22:04,000 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:22:06,916 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:22:07,942 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:22:07,958 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:22:15,848 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:22:16,385 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:22:19,052 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:22:19,942 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:22:19,956 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:22:40,862 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:22:41,310 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:22:43,555 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:22:44,489 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:22:44,507 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:22:55,792 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:22:56,336 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:22:59,077 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:22:59,887 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:22:59,895 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:23:13,787 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:13] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:23:14,030 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:14] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:23:26,656 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:23:26,708 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:23:26,746 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:23:26,746 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:23:26,762 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:23:26,762 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:23:26,785 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:23:26,786 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:23:26,786 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:26] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:23:33,867 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism_api.py', reloading
+2025-09-10 18:23:34,963 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:23:38,098 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:23:38,938 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:23:38,961 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:23:41,421 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:41] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:23:41,442 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:41] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:23:46,519 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:23:46,549 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:23:46,567 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:23:46,567 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:23:46,582 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:23:46,583 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:23:46,592 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:23:46,592 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:23:46,592 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:23:46] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:27:17,269 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:27:17,715 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:27:20,543 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:27:21,527 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:27:21,534 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:27:59,918 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:28:01,088 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:28:04,072 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:28:04,894 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:28:04,916 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:28:37,209 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:28:37,706 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:28:40,193 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:28:40,914 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:28:40,920 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:29:00,038 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:29:00,614 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:29:03,000 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:29:03,807 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:29:03,813 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:29:32,000 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:29:32,443 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:29:34,515 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:29:35,475 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:29:35,515 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:30:11,262 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:30:11,668 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:30:14,041 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:30:14,946 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:30:14,954 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:30:34,500 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:30:34,946 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:30:37,588 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:30:38,371 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:30:38,371 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:30:43,496 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:30:43] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:30:43,766 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:30:43] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:30:58,947 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:30:58,978 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:30:58,999 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:30:59,000 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:30:59,010 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:30:59,010 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:30:59,019 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:30:59,019 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:30:59,019 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:30:59] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:31:20,034 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:31:20,335 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:31:22,113 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:31:23,002 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:31:23,015 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:31:49,080 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\feature_extraction.py', reloading
+2025-09-10 18:31:49,798 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:31:52,507 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:31:53,113 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:31:53,129 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:31:55,179 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:31:55] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:31:55,195 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:31:55] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:31:58,837 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:31:58,874 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:31:58,891 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:31:58,891 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:31:58,901 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:31:58,901 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:31:58,909 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:31:58,909 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:31:58,916 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:31:58] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:32:12,382 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:32:12,400 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:32:12,421 - app - ERROR - Error in AI detection prediction: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:32:12,421 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:32:12] "POST /plagiarism/check HTTP/1.1" 200 -
+2025-09-10 18:32:29,934 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:32:29,937 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:32:29,959 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:32:29,959 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:32:29,971 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:32:29,971 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:32:29,984 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:32:29,984 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:32:29,987 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:32:29] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:34:10,584 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:34:11,135 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:34:13,739 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:34:14,300 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:34:14,307 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:34:29,273 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:34:29,812 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:34:32,235 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:34:33,079 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:34:33,082 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:35:09,717 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:35:09] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:35:09,964 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:35:09] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:36:04,718 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:36:04,804 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:36:04,847 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2) - Copy.pdf: 44.2%
+2025-09-10 18:36:04,868 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:36:04,884 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (2) - Copy.pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 44.4%
+2025-09-10 18:36:04,884 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:36:04,915 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:36:04,917 - ml_models - INFO - Starting AI content analysis of 81 characters
+2025-09-10 18:36:04,941 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2) - Copy.pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:36:04,941 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:36:04,965 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:36:04,965 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2) - Copy.pdf: 44.2%
+2025-09-10 18:36:04,965 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:36:04,965 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (2) - Copy.pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 44.4%
+2025-09-10 18:36:04,974 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:36:04] "POST /plagiarism/compare HTTP/1.1" 200 -
+2025-09-10 18:36:23,217 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:36:23,650 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:36:26,632 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:36:27,521 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:36:27,531 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:38:40,012 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:38:40,727 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:38:44,142 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:38:45,151 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:38:45,166 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:38:50,492 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:38:51,210 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:38:55,108 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:38:56,188 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:38:56,212 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:39:42,146 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:39:42,817 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:39:48,549 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:39:49,929 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:39:49,951 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:40:11,692 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:40:12,078 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:40:13,945 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:40:14,582 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:40:14,588 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:40:22,061 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:40:22,529 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:40:25,392 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:40:26,047 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:40:26,060 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:40:33,239 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:40:33,590 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:40:35,453 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:40:35,962 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:40:35,969 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:40:47,228 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:40:47,627 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:40:49,519 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:40:49,979 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:40:49,986 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:40:56,707 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:40:56] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:40:56,952 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:40:56] "GET /user/check-auth HTTP/1.1" 200 -
+2025-09-10 18:41:29,822 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:41:30,339 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:41:33,802 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:41:34,544 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:41:34,553 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:41:43,329 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:41:43,720 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:41:46,176 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:41:46,869 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:41:46,877 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:41:53,653 - werkzeug - INFO -  * Detected change in 'C:\\Users\\rajve\\Desktop\\ml\\backend\\plagiarism.py', reloading
+2025-09-10 18:41:54,172 - werkzeug - INFO -  * Restarting with stat
+2025-09-10 18:41:57,098 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:41:58,019 - werkzeug - WARNING -  * Debugger is active!
+2025-09-10 18:41:58,027 - werkzeug - INFO -  * Debugger PIN: 100-048-000
+2025-09-10 18:42:10,668 - app - INFO - Comparing files with method: hybrid, sensitivity: 0.7, ensure_exact_matches: True
+2025-09-10 18:42:10,704 - ml_models - INFO - No existing model found, creating new ensemble model
+2025-09-10 18:42:10,738 - app - INFO - Similarity between Code_of_Civil_and_Procedural_Law (1).pdf and Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:42:10,739 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:42:10,748 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (1).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:42:10,749 - ml_models - INFO - Starting AI content analysis of 74 characters
+2025-09-10 18:42:10,756 - app - ERROR - Error detecting AI in Code_of_Civil_and_Procedural_Law (2).pdf: 'AIDetector' object has no attribute '_get_feature_importance'
+2025-09-10 18:42:10,757 - app - INFO - FINAL COMPARISON: Code_of_Civil_and_Procedural_Law (1).pdf vs Code_of_Civil_and_Procedural_Law (2).pdf: 48.0%
+2025-09-10 18:42:10,759 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 18:42:10] "POST /plagiarism/compare HTTP/1.1" 200 -
